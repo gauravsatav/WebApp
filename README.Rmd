@@ -1,4 +1,5 @@
-title: "Untitled"
+---
+title: "WebApp"
 output: github_document
 ---
 
@@ -6,24 +7,10 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## GitHub Documents
+## Purpose
 
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+This is my attempt at building up a simple R Web Application and upload it on `shinyapps.io`.
 
-## Including Code
+The application can is accessible [here](https://gauravsatav.shinyapps.io/WebApp/).
 
-You can include R code in the document as follows:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+The application uses the data present in the `./Data` and after reading it using `read.csv` we plot a simple histogram taking input dynamically from the slider.
