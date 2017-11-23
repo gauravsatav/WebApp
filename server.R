@@ -7,12 +7,14 @@
 
 library(shiny)
 
-shinyServer(function(input, output) {
+myfaithful <- read.csv("./Data/faithful2.csv")
 
-  output$distPlot <- renderPlot({
+shinyServer(function(input, output) {
+    
+    output$distPlot <- renderPlot({
 
     # generate bins based on input$bins from ui.R
-    x    <- faithful[, 2]
+    x    <- myfaithful[, 2]
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
 
     # draw the histogram with the specified number of bins
